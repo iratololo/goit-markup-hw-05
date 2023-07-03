@@ -55,6 +55,7 @@ main {
 }
 
 button {
+    font-family: inherit;
     cursor: pointer;
     border: none;
     padding: 0;
@@ -169,8 +170,10 @@ img {
     padding: 32px 16px;
 }
 
+/*____________________СПІЛЬНІ НАЛАШТУВАННЯ - EЛЕМЕНТИ ФОРМИ___________________________*/
+
 .button {
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: capitalize;
@@ -179,8 +182,28 @@ img {
     /* display: inline-block; */
     display: block;
     border-radius: 4px;
-    transition: background-color var(--duration) var(--timingFunction), color var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
+    /* transition: background-color var(--duration) var(--timingFunction), color var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction); */
 }
+
+.input {
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+.input::placeholder {
+    letter-spacing: 0.04em;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+
+/*____________________СПІЛЬНІ НАЛАШТУВАННЯ - SOCIAL___________________________*/
+
 
 .social {
     display: flex;
@@ -484,8 +507,19 @@ img {
     flex-wrap: wrap;
 }
 
-.footer-column-one:not(:last-child) {
+.footer-info {
+    flex-basis: 264px;
+}
+
+.footer-social {
+    flex-basis: 208px;
+}
+
+.footer-info:not(:last-child) {
     margin-right: 120px;
+}
+.footer-social:not(:last-child) {
+    margin-right: 80px;
 }
 
 .footer-logo {
@@ -526,6 +560,61 @@ img {
 }
 
 
+/*____________________FOOTER-FORM___________________________*/
+
+
+.footer-subscription {
+    flex-basis: 453px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.footer-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-form-label {
+    flex-basis: 264px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.footer-form-input {
+    color: var(--white);
+    min-width: 100%;
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.footer-form-input::placeholder {
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.footer-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: var(--white);
+    background-color: var(--iris);
+    padding: 8px 24px;
+    transition: background-color var(--duration) var(--timingFunction);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: var(--ocean);
+}
+
+.footer-form-svg {
+    fill: currentColor;
+}
+
+
 /*____________________FILTER / PORTFOLIO___________________________*/
 
 .portfolio {
@@ -549,6 +638,7 @@ img {
     background-color: var(--cloud);
     padding: 12px 24px;
     border: 1px solid var(--cornflower);
+    transition: background-color var(--duration) var(--timingFunction), color var(--duration) var(--timingFunction), border-color var(--duration) var(--timingFunction);
 }
 
 
