@@ -818,8 +818,7 @@ img {
 }
 
 .modal-form-item {
-    position: relative;
-    display: block;
+    /* position: relative; */
 }
 
 .modal-form-item:not(:last-child) {
@@ -830,6 +829,17 @@ img {
     color: var(--lightSlate);
     font-size: 12px;
     line-height: 1.17;
+    letter-spacing: 0.04em;
+    display: block;
+}
+
+.modal-form-label:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+
+.input-wrap {
+    position: relative;
 }
 
 .modal-form-input {
