@@ -186,6 +186,9 @@ img {
 }
 
 .input {
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
     letter-spacing: 0.04em;
     line-height: 1.5;
     display: flex;
@@ -193,12 +196,23 @@ img {
     background-color: transparent;
     border-radius: 4px;
     padding: 8px 16px;
+    outline: transparent;
+    transition: border-color var(--duration) var(--timingFunction);
 }
 
 .input::placeholder {
     letter-spacing: 0.04em;
     font-size: 12px;
     font-family: inherit;
+    transition: transform var(--duration) var(--timingFunction);
+}
+
+.input:focus {
+    border-color: var(--iris);
+}
+
+.input:focus::placeholder {
+    transform: translate(-100%, 0);
 }
 
 
@@ -572,29 +586,35 @@ img {
 .footer-form {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 24px;
 }
 
 .footer-form-label {
     flex-basis: 264px;
-    flex-grow: 1;
-    flex-shrink: 1;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
 }
 
 .footer-form-input {
     color: var(--white);
-    min-width: 100%;
     border: 1px solid var(--white);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .footer-form-input::placeholder {
+    font-size: 12px;
     line-height: 1.5;
+    letter-spacing: 0.04em;
     color: var(--white);
 }
 
 .footer-form-btn {
+    min-height: 40px;
+    flex-basis: 165px;
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -612,6 +632,8 @@ img {
 
 .footer-form-svg {
     fill: currentColor;
+    flex-basis: 24px;
+    flex-shrink: 0;
 }
 
 
@@ -726,6 +748,7 @@ img {
 }
 
 .modal-window {
+    padding: 72px 24px 24px;
     width: 408px;
     min-height: 584px;
     background-color: var(--dairy);
@@ -772,4 +795,147 @@ img {
 .modal-btn:hover .modal-icon,
 .modal-btn:focus .modal-icon {
     fill: var(--white);
+}
+
+
+
+.modal-title {
+    text-align: center;
+    font-weight: 500;
+    color: var(--navyBlue);
+    margin-bottom: 16px;
+}
+
+/*____________________MODAL-FORM___________________________*/
+
+.modal-form {}
+
+.modal-form-items:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.modal-form-item {
+    position: relative;
+    display: block;
+}
+
+.modal-form-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.modal-form-label {
+    color: var(--lightSlate);
+    font-size: 12px;
+    line-height: 1.17;
+}
+
+.modal-form-input {
+    color: var(--navyBlue);
+    border: 1px solid var(--navyBlueModal);
+    padding: 8px 38px;
+}
+
+.textarea {
+    min-height: 120px;
+    padding: 8px 16px;
+    resize: none;
+}
+
+.textarea::placeholder {
+    color: var(--navyBlueModal);
+}
+
+.modal-form-svg {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    fill: var(--navyBlue);
+    transition: fill var(--duration) var(--timingFunction);
+}
+
+.modal-form-input:focus+.modal-form-svg {
+    fill: var(--iris);
+}
+
+
+
+.modal-form-accord {
+    position: relative;
+}
+
+
+.modal-form-accord:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.modal-checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-checkbox-label::before {
+    content: "";
+    flex-basis: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    border: 1px solid var(--navyBlueModal);
+    background-color: transparent
+    transition: border-color var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
+}
+
+.modal-form-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.modal-form-checkbox:checked + .modal-checkbox-label::before {
+    background-color: var(--ocean);
+    border-color var(--ocean):
+}
+
+.modal-checkbox-svg {
+    position: absolute;
+    /* top: 0;
+        left: 0; */
+    top: 4px;
+    left: 3px;
+    fill: transparent;
+    transition: fill var(--duration) var(--timingFunction);
+}
+
+.modal-form-checkbox:checked + .modal-checkbox-label + .modal-checkbox-svg {
+    fill: var(--cloud);
+}
+
+
+
+.modal-form-link {
+    color: var(--iris);
+    transition: color var(--duration) var(--timingFunction);
+}
+
+.modal-form-link:hover,
+.modal-form-link:focus {
+    color: var(--ocean);
+}
+
+
+.modal-form-btn {
+    margin: 0 auto;
+    min-height: 56px;
+    min-width: 169px;
+    padding: 16px 32px;
+    background-color: var(--iris);
+    color: var(--white);
+    transition: background-color var(--duration) var(--timingFunction);
+}
+
+.modal-form-btn:hover, 
+.modal-form-btn:focus {
+    background-color: var(--ocean);
 }
