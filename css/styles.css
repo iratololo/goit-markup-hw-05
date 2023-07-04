@@ -814,13 +814,15 @@ img {
 .modal-form {}
 
 
-.modal-form-item:last-child {
+.modal-form-item {
+    margin-bottom: 8px;
+}
+
+
+.form-item-text {
     margin-bottom: 16px;
 }
 
-.modal-form-item:not(:last-child) {
-    margin-bottom: 8px;
-}
 
 .modal-form-label {
     color: var(--lightSlate);
