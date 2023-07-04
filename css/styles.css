@@ -813,12 +813,9 @@ img {
 
 .modal-form {}
 
-.modal-form-items:not(:last-child) {
-    margin-bottom: 16px;
-}
 
-.modal-form-item {
-    /* position: relative; */
+.modal-form-item:last-child {
+    margin-bottom: 16px;
 }
 
 .modal-form-item:not(:last-child) {
