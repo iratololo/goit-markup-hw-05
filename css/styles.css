@@ -600,7 +600,8 @@ img {
 .footer-form-input {
     color: var(--white);
     border: 1px solid var(--white);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-form-input::placeholder {
@@ -613,12 +614,13 @@ img {
 .footer-form-btn {
     min-height: 40px;
     flex-basis: 165px;
+    min-width: 165px;
     /* flex-shrink: 1; */
     /* flex-grow: 1; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    /* gap: 16px; */
     color: var(--white);
     background-color: var(--iris);
     padding: 8px 24px;
@@ -634,6 +636,7 @@ img {
     fill: currentColor;
     flex-basis: 24px;
     flex-shrink: 0;
+    margin-left: 16px;
 }
 
 
