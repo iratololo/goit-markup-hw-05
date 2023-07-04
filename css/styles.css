@@ -862,7 +862,8 @@ img {
 
 .modal-form-svg {
     position: absolute;
-    bottom: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 16px;
     fill: var(--navyBlue);
     transition: fill var(--duration) var(--timingFunction);
@@ -919,25 +920,18 @@ img {
     border-radius: 2px;
     flex-shrink: 0;
     border: 1px solid var(--navyBlueModal);
-    background-color: transparent transition: border-color var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
+    fill: transparent;
+    background-color: transparent;
+    transition: border var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction), fill var(--duration) var(--timingFunction);
 }
 
 .modal-form-checkbox:checked + .modal-checkbox-label>.checkbox-label-wrap {
     background-color: var(--ocean);
-    border-color var(--ocean):
-}
-
-.modal-checkbox-svg {
-    /* position: absolute;
-    top: 4px;
-    left: 3px; */
-    fill: transparent;
-    transition: fill var(--duration) var(--timingFunction);
-}
-
-.modal-form-checkbox:checked + .modal-checkbox-label>.checkbox-label-wrap>.modal-checkbox-svg {
+    border: none;
     fill: var(--cloud);
 }
+
+
 
 
 
