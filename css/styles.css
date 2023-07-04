@@ -919,8 +919,8 @@ img {
     height: 16px;
     border-radius: 2px;
     flex-shrink: 0;
-    border: 1px solid var(--navyBlueModal);
     fill: transparent;
+    border: 1px solid var(--navyBlueModal);
     background-color: transparent;
     transition: border var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction), fill var(--duration) var(--timingFunction);
 }
