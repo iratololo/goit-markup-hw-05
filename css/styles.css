@@ -11,7 +11,7 @@
     --lightSlate: #8E8F99;
     --cornflower: #E7E9FC;
     --cloud: #F4F4FD;
-    --navyBlueModal: #2e2f4266;
+    --navyBlueModal: rgba(46, 47, 66, 0.4);
     --grey: #2e2f42b3;
     --white: #ffffff;
     --dairy: #FCFCFC;
@@ -848,9 +848,12 @@ img {
 }
 
 .textarea {
+    font-size: 12px;
+    line-height: 1.17;
     min-height: 120px;
     padding: 8px 16px;
     resize: none;
+    color: var(--navyBlueModal);
 }
 
 .textarea::placeholder {
@@ -881,13 +884,13 @@ img {
 }
 
 .modal-checkbox-label {
-    position: relative;
+    /* position: relative;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8px; */
 }
 
-.modal-checkbox-label::before {
+/* .modal-checkbox-label::before {
     content: "";
     flex-basis: 16px;
     height: 16px;
@@ -896,7 +899,7 @@ img {
     border: 1px solid var(--navyBlueModal);
     background-color: transparent
     transition: border-color var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
-}
+} */
 
 .modal-form-checkbox {
     position: absolute;
@@ -905,22 +908,34 @@ img {
     opacity: 0;
 }
 
-.modal-form-checkbox:checked + .modal-checkbox-label::before {
+
+.checkbox-label-wrap {
+    margin-right: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    border: 1px solid var(--navyBlueModal);
+    background-color: transparent transition: border-color var(--duration) var(--timingFunction), background-color var(--duration) var(--timingFunction);
+}
+
+.modal-form-checkbox:checked + .modal-checkbox-label>.checkbox-label-wrap {
     background-color: var(--ocean);
     border-color var(--ocean):
 }
 
 .modal-checkbox-svg {
-    position: absolute;
-    /* top: 0;
-        left: 0; */
+    /* position: absolute;
     top: 4px;
-    left: 3px;
+    left: 3px; */
     fill: transparent;
     transition: fill var(--duration) var(--timingFunction);
 }
 
-.modal-form-checkbox:checked + .modal-checkbox-label + .modal-checkbox-svg {
+.modal-form-checkbox:checked + .modal-checkbox-label>.checkbox-label-wrap>.modal-checkbox-svg {
     fill: var(--cloud);
 }
 

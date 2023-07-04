@@ -564,21 +564,22 @@
           </div>
           <div class="modal-form-accord">
             <input
-              class="modal-form-checkbox"
+              class="modal-form-checkbox visually-hidden"
               type="checkbox"
-              name="user-accord"
-              id="user-accord" />
+              name="user-privacy"
+              id="user-privacy"
+              value="true" />
             <label
-              for="user-accord"
+              for="user-privacy"
               class="modal-form-label modal-checkbox-label">
               <span class="checkbox-label-wrap">
-                I accept the terms and conditions of the
-                <a href="" class="modal-form-link">Privacy Policy</a>
+                <svg class="modal-checkbox-svg" width="10" height="8">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
               </span>
+              I accept the terms and conditions of the
+              <a href="" class="modal-form-link">Privacy Policy</a>
             </label>
-            <svg class="modal-checkbox-svg" width="10" height="8">
-              <use href="./images/icons.svg#check"></use>
-            </svg>
           </div>
           <button type="submit" class="modal-form-btn button">Send</button>
         </form>
